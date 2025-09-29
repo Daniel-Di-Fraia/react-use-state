@@ -2,14 +2,14 @@ import languages from "../../../../languages";
 
 function ButtonsMain(props) {
 
-    const { titolo , onClick } = props;
+    const { titolo , onClick , isActive} = props;
 
     return (
         <>
             <button 
             type="button" 
-            className= "btn btn-primary fs-5"
-            onClick={onClick}>
+            onClick={onClick}
+            className= {`btn ${isActive ? "btn-warning" : "btn-primary"}`}>
                 {titolo}
             </button>
         </>

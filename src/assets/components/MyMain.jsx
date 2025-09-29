@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function MyMain() {
 
-    const [clicked, setClicked] = useState({ description: "Seleziona un linguaggio..." });
+    const [clicked, setClicked] = useState(null);
 
     return (
         <>
@@ -15,15 +15,16 @@ function MyMain() {
                     <ButtonsMain
                         key={card.id}
                         titolo={card.title}
+                        isActive={clicked?.id === card.id}
                         onClick={() => setClicked(card)}
                     />
 
                 ))}
             </div>
             <div className="d-flex justify-content-center mt-5 container">
-                {clicked && <CardMain
-                    content={clicked.description}
-                />
+                {clicked 
+                ? <CardMain content={clicked.description} titolo={clicked.title}/>
+                : <CardMain content = "Seleziona un linguaggio di programmazione" />
                 }
             </div>
         </>

@@ -2,14 +2,13 @@ import languages from "../../../../languages";
 
 function CardMain(props) {
 
-    const { content } = props;
+    const { content , titolo } = props;
 
     return (
         <>
             <div className="card container">
-                <div className="card-body fs-4">
-                    {content}
-                </div>
+                <h3 className="m-2">{titolo}</h3>
+                <p className="card-body fs-4">{content}</p>
             </div>
         </>
     )
