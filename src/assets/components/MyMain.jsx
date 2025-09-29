@@ -1,3 +1,4 @@
+//importiamo i componenti del main, il file JS con gli oggetti e lo stato 
 import languages from "../../../languages"
 import ButtonsMain from "./mainComponents/ButtonsMain"
 import CardMain from "./mainComponents/CardMain"
@@ -9,6 +10,7 @@ function MyMain() {
 
     return (
         <>
+        {/* sezione bottoni main di pagina */}
             <div className="d-flex justify-content-center gap-4 mt-5">
                 {languages.map(card => (
 
@@ -16,11 +18,14 @@ function MyMain() {
                         key={card.id}
                         titolo={card.title}
                         isActive={clicked?.id === card.id}
+                        // stato click bottone
                         onClick={() => setClicked(card)}
                     />
 
                 ))}
             </div>
+
+            {/* contenuto oggetti card del main */}
             <div className="d-flex justify-content-center mt-5 container">
                 {clicked
                     ? <CardMain content={clicked.description} titolo={clicked.title} />

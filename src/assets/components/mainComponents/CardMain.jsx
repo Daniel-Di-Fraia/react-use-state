@@ -1,5 +1,6 @@
 import languages from "../../../../languages";
 
+//contenuto pagina in base al bottone clickato in card
 function CardMain(props) {
 
     const { content, titolo } = props;
