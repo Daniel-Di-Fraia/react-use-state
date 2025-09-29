@@ -1,12 +1,12 @@
+import languages from "../../../../languages";
+
 function ButtonsMain(props) {
 
-    const { title, description } = props;
+    const { titolo } = props;
 
     return (
         <>
-            <div className="d-flex">
-                <button type="button" class="btn btn-primary">{props.title}</button>
-            </div>
+            <button type="button" className="btn btn-primary">{titolo}</button>
         </>
     )
 }
