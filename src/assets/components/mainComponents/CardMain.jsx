@@ -7,7 +7,7 @@ function CardMain(props) {
     return (
         <>
             <div className="card container">
-                <div className="card-body">
+                <div className="card-body fs-4">
                     {content}
                 </div>
             </div>
