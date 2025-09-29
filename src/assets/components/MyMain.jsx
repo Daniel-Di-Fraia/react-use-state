@@ -22,9 +22,9 @@ function MyMain() {
                 ))}
             </div>
             <div className="d-flex justify-content-center mt-5 container">
-                {clicked 
-                ? <CardMain content={clicked.description} titolo={clicked.title}/>
-                : <CardMain content = "Seleziona un linguaggio di programmazione" />
+                {clicked
+                    ? <CardMain content={clicked.description} titolo={clicked.title} />
+                    : <CardMain content="Seleziona un linguaggio di programmazione" />
                 }
             </div>
         </>
