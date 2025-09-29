@@ -7,7 +7,7 @@ function CardMain(props) {
     return (
         <>
             <div className="card container">
-                <h3 className="ms-3 mt-3">{titolo}</h3>
+                <h3 className="mt-3 ms-3">{titolo}</h3>
                 <p className="card-body fs-4">{content}</p>
             </div>
         </>
